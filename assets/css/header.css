@@ -1,0 +1,126 @@
+/* header */
+#header {
+    width: 100%;
+    height: 64px;
+    position: relative;
+    background-color: var(--white);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    color: var(--black);
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+/* //Profile */
+.Profile {
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    background-color: var(--black);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.popup_Profile {
+    width: 250px;
+    height: 320px;
+    background-color: #e2e2e2bd;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+    display: none;
+    top: 4rem;
+    z-index: 10000;
+}
+
+.popup_Profile>p {
+    margin: 0 auto;
+}
+
+/* popup_Profile_top */
+.popup_Profile_top {
+    height: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup_Profile .popup_Profile_top>img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+
+/* 닉네임 스타일 추가 */
+.popup_Profile .popup_Profile_top>p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black);
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.popup_Profile__line {
+    width: 90%;
+    height: 0.1rem;
+    background-color: var(--black700);
+    opacity: .6;
+    margin: 0 auto;
+}
+
+/* popup_Profile_butm */
+.popup_Profile_butm {
+    padding: 10px;
+}
+
+.setting:hover,
+.logout:hover,
+.mycode:hover {
+    background-color: #fff;
+    color: #121212;
+    border-radius: 20px;
+}
+
+/* mycode, setting, logout 공통 스타일 */
+.popup_Profile_butm .mycode,
+.popup_Profile_butm .setting,
+.popup_Profile_butm .logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.popup_Profile_butm .mycode p,
+.popup_Profile_butm .setting p,
+.popup_Profile_butm .logout p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.popup_Profile_butm .mycode img,
+.popup_Profile_butm .setting img,
+.popup_Profile_butm .logout img {
+    width: 20px;
+    height: 20px;
+}

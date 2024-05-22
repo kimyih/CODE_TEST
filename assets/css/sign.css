@@ -1,0 +1,197 @@
+/* sign */
+.sign {
+    width: 100%;
+    height: 100%;
+    background-color: #0000001f;
+    z-index: 20000;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+
+.popup_close {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+/* sign__menu */
+.sign__menu {
+    display: flex;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.sign__menu div {
+    margin-right: 20px;
+    font-size: 1.8rem;
+    font-family: var(--fontL);
+    font-weight: 900;
+    color: var(--pointColor1-1);
+    cursor: pointer;
+}
+
+.sign__menu div:active {
+    margin-right: 20px;
+    font-size: 1.8rem;
+    font-family: var(--fontL);
+    font-weight: 900;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* sign__form */
+.sign__form {
+    width: 500px;
+    background-color: rgba(179, 222, 190, 0.95);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 30px;
+}
+
+/* sign__in */
+.sign__in {
+    /* display: none; */
+    height: 400px;
+}
+
+.sign__in .center {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sign__in>form {
+    margin-top: 100px;
+    padding: 40px;
+}
+
+.sign__in .user__find a {
+    color: var(--pointColor1);
+}
+
+.sign__in__btn.active {
+    color: var(--pointColor1);
+    /* sign in 버튼이 active일 때의 색 */
+}
+
+/* sign__up */
+.sign__up {
+    display: none;
+    margin-top: -40px;
+    width: 500px;
+    height: 560px;
+}
+
+.sign__up .required {
+    color: var(--pointColor1);
+}
+
+.sign__up .center {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sign__up>form {
+    margin-top: 130px;
+    padding: 40px;
+}
+
+.sign__up div .check {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sign__up div .check input {
+    width: 69%;
+}
+
+.sign__up>div>input {
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 20px;
+}
+
+.sign__up div .check .btn {
+    width: 30%;
+    text-align: center;
+    background-color: var(--pointColor1);
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+}
+
+.sign__up__btn.active {
+    color: var(--pointColor1)
+        /* sign up 버튼이 active일 때의 배경색 */
+}
+
+/* sign__policy */
+.sign__policy {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 40px;
+    font-family: var(--fontN);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+
+.sign__policy a {
+    text-decoration: underline;
+    text-underline-offset: unset;
+    text-underline-position: under;
+}
+
+/* user__find */
+.user__find {
+    padding: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.user__find li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user__find span {
+    font-family: var(--fontN);
+    font-size: 0.9rem;
+    color: var(--pointColor1);
+}
+
+.user__find a {
+    font-family: var(--fontN);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-underline-offset: unset;
+    text-underline-position: under;
+}
+
+/* input-style */
+.input-style {
+    width: 100%;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+}

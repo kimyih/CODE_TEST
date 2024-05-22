@@ -1,0 +1,181 @@
+/* 아이디 찾기 css 입니다. */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontM);
+    box-sizing: border-box;
+    line-height: inherit;
+}
+
+/* //myidfind */
+
+.myidfind {
+    flex: 1 0 auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: auto;
+    min-width: 220px;
+}
+
+.main__inner {
+    max-width: 820px;
+    margin: 0 auto;
+    border: 1px solid var(--white);
+}
+
+.main_container {
+    background-color: #070707;
+    border-radius: 30px;
+    padding: 40px 40px 40px 40px;
+}
+
+.main_container .idfind_title h1 {
+    color: var(--white);
+}
+
+/* //idfind_contents */
+.idfind_contents {
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.5;
+    clear: both;
+    font-size: 1.1rem;
+    margin-top: 30px;
+}
+
+.text_guide {
+    margin-bottom: 12px;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+.one_input_container {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin: 26px 0 12px 0;
+}
+
+.one_input_container>label {
+    position: absolute;
+    top: -1px;
+    left: auto;
+    max-width: 100%;
+    height: 2.7em;
+    line-height: 1.33;
+    font-weight: 500;
+    color: #A9A9A9;
+    font-size: 18px;
+    cursor: text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    /* z-index: -1; */
+    pointer-events: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transform: translate3d(0, 1px, 0) scale(1);
+    transform: translate3d(0, 1px, 0) scale(1);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.one_input_container.focus>label {
+    top: -16px;
+    left: auto;
+    font-size: 12px;
+    line-height: 1.33;
+    color: var(--pointColor3);
+}
+
+.one_input_container>input:focus {
+    outline: 0;
+    border-color: var(--pointColor3);
+    border-width: 2px;
+    color: var(--white)
+}
+
+.one_input_container>input {
+    display: block;
+    width: 100%;
+    color: #A9A9A9;
+    border: none;
+    border-bottom: 1px solid #a9a9a9;
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 0;
+    height: 36px;
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+.findform_error_msg {
+    font-size: 1rem;
+    color: #db332a;
+    margin-top: 6px;
+}
+
+/* //one_btn_container */
+
+.one_btn_container {
+    width: fit-content;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.findid_btn {
+    background-color: var(--pointColor3);
+    color: white;
+    width: 100%;
+    min-width: 200px;
+    min-height: 44px;
+    padding: 8px 16px;
+    margin: 0 auto 12px auto;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 24px;
+    display: block;
+    word-wrap: break-word;
+    position: relative;
+    cursor: pointer;
+}
+
+.findid_btn:disabled {
+    background-color: rgba(120, 227, 208, 0.3);
+    color: #fafafa;
+    opacity: 0.4;
+}
+
+/* //under_menu */
+.under_menu {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.under_menu li {
+    color: #78E3D0;
+    list-style: none;
+    margin: 0 0 8px 0;
+}
+
+.under_menu li a {
+    color: #ffffff5e;
+    display: inline-block;
+    text-decoration: underline;
+}

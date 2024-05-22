@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header id="header" role="banner">
+        <h1 class="logo">CODE PIN</h1>
+        <div class="Profile">
+            <div class="popup_Profile">
+                <div class="popup_Profile_top">
+                    <img src="assets/img/974e19416242ccb6755ce5e4878d4988.jpg" alt="유저 이미지">
+                    <p>닉네임</p>
+                </div>
+                <div class="popup_Profile_butm">
+                    <div class="mycode">
+                        <p>내 코드</p>
+                        <img src="assets/img/Vector.svg" alt="화살표">
+                    </div>
+                    <div class="setting">
+                        <img src="assets/img/setting.svg" alt="설정">
+                        <p>설정</p>
+                    </div>
+                    <div class="logout">
+                        <img src="assets/img/logout.svg" alt="화살표">
+                        <p>로그아웃</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+    <main id="main">
+        <h3 class="codepin">
+            <p>📌COD<em>E</em> PIN</p>
+        </h3>
+        <div class="linkinput">
+            <input type="link" name="youLink" id="youLink" placeholder="로그인 하여 코드를 저장해보세요.">
+            <button><a href="./signin_up/signin.html">Login</a></button>
+        </div>
+        <!-- 링크 박스 -->
+    </main>
+    <!-- main -->
+
+    <section id="conetents">
+        <article class="content">
+            <div class="contetns_wrap">
+                <div class="Mypage_header"></div>
+                <div class="Mypage_tap">
+                    <a href="#"><button class="Mypage_code">코드</button></a>
+                    <a href="#"><button class="Mypage_board">보드</button></a>
+                    <a href="#"><button class="Mypage_feed">피드</button></a>
+                    <!-- 코드, 보더 변경 버튼 -->
+                </div>
+                <div class="Mypage_info">
+                    <div class="Mypage_info_codes">
+                        <div class="MyPage_info_items">
+                            <p class="Mypage_count">몇 개의 코드</p>
+                            <button class="Mypage_addItem">
+                                <img src="./assets/img/icon_cross_grey.webp" alt="">
+                                <span>코드 추가</span>
+                            </button>
+                        </div>
+                        <div class="Code_Gird">
+                            <div class="Item_out">
+                                <div class="Item_in">
+                                    <a href="#">
+                                        <div class="Item_square">
+                                            <div class="Item_overlay"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!-- //conetents  -->
+
+    <footer id="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="left">
+                    <span>문의 : </span><a href="wlsakf23@gmail.com" class="maill">wlsakf23@gmail.com</a>
+                    <p>Copyright © WEBS Corp. All Rights Reserved.</p>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a href="https://github.com/kimyih">김이현</a></li>
+                        <li><a href="https://github.com/KIMJW04">김진우</a></li>
+                        <li><a href="https://github.com/sunhew">최선화</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // .Profile 클릭 시 팝업 보이기
+            $(".Profile").click(function (event) {
+                $(".popup_Profile").show();
+                event.stopPropagation();
+            });
+
+            // 팝업 외부 클릭 시 숨기기
+            $(document).click(function () {
+                $(".popup_Profile").hide();
+            });
+
+            // 팝업 내부 클릭 시 팝업 유지
+            $(".popup_Profile").click(function (event) {
+                event.stopPropagation();
+            });
+        });
+
+
+        // 설정 팝업
+        const borders = document.querySelectorAll('.border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8, .border9, .border10');
+        const editor = document.getElementById('editor');
+
+        // 각 border 요소에 클릭 이벤트 리스너 추가
+        borders.forEach(border => {
+            border.addEventListener('click', function (event) {
+                // editor의 위치를 클릭한 위치로 설정
+                editor.style.left = event.pageX + 'px';
+                editor.style.top = event.pageY + 'px';
+                editor.style.display = 'block';
+            });
+        });
+
+        // editor 외부를 클릭했을 때 editor를 숨김
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.border1, .border2, .border3, .border4, .border5, .border6, .border7, .border8, .border9, .border10')) {
+                editor.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+:root {
+    --fontN: "NanumSquareNeo";
+    --fontG: "GmarketSans";
+    --fontM: "Montserrat";
+
+    --pointColor3: #78E3D0;
+
+    --white: #fff;
+    --white100: #fff;
+    --white200: #e1e1e1;
+    --white300: #ddd;
+    --white400: #ccc;
+    --white500: #bbb;
+    --white600: #aaa;
+    --white700: #d9d9d9;
+
+    --black: #000;
+    --black100: #111;
+    --black200: #222;
+    --black300: #333;
+    --black400: #444;
+    --black500: #555;
+    --black600: #666;
+    --black700: #777;
+
+    /* 기본 폰트 설정 */
+    font-family: var(--fontM);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    /* 아이폰 가로 모드에서 글씨 확대 금지 */
+    -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+/* My page_info code_Grid */
+@media screen and (min-width: 996px) {
+    .Code_Grid {
+        grid-template-columns: repeat(5, minmax(16.6rem, 27.8rem));
+    }
+}
+
+@media screen and (min-width: 525px) {
+    .Code_Grid {
+        grid-template-columns: repeat(3, minmax(14.4rem, 48rem));
+    }
+}
+
+@media screen and (min-width: 281px) {
+    .Code_Grid {
+        grid-template-columns: repeat(2, minmax(11.55rem, 27.6rem));
+    }
+}
+
+/* //addItem_container_modal */
+@media (min-width: 768px) {
+    .addItem_container_modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .addItem_modal {
+        position: static;
+    }
+}
+
+@media (min-width: 768px) {
+    .addItem_popup {
+        width: 44rem;
+        height: auto;
+        border-radius: 3.6rem;
+        position: static;
+        padding: 2.8rem 0;
+    }
+}
+
+/* addItem_popup_top */
+@media (min-width: 768px) {
+    .addItem_container_modal .addItem_popup_top {
+        padding: 0 4rem;
+        height: auto;
+        margin-bottom: 4rem;
+    }
+}
+
+/* //item_edit_Container */
+@media (min-width: 768px) {
+
+    .item_edit_Container {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .item_edit_Container {
+        position: absolute;
+        top: 83%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: .7rem;
+    }
+}
+
+/* //boardItem_square */
+@media (min-width: 768px) {
+    .boardItem_square {
+        border-radius: 3.6rem;
+    }
+}
+
+/* //boardItem_edit */
+@media (min-width: 768px) {
+    .boardItem_edit {
+        display: none;
+        width: 3.6rem;
+        height: 3.6rem;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+/* // */
+
+@media (min-width: 768px) {
+    .addboard_popup_container {
+        width: 44rem;
+        height: auto;
+        border-radius: 3.6rem;
+        position: static;
+        padding: 2.8rem 0;
+    }
+}
+
+
+/* //myidfind */
+@media (min-width: 680px) {
+    .myidfind {
+        flex-grow: 0;
+        margin-bottom: -1px;
+        padding-top: 150px;
+    }
+}
+
+@media (min-width: 680px) {
+    .myidfind .main__inner {
+        background-color: #070707;
+        border-radius: 26px;
+        padding: 60px 72px 48px 72px;
+    }
+}
+
+/* // */
+@media (min-width: 680px) {
+    .idfind_title h1 {
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 1.25;
+        margin-bottom: 36px;
+    }
+}

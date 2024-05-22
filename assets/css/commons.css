@@ -1,0 +1,106 @@
+/* body */
+body {
+    background-color: var(--black);
+}
+
+/* skip */
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+
+#skip a {
+    background-color: var(--black);
+    color: var(--white);
+    position: absolute;
+    left: -400px;
+    top: 0;
+    padding: 10px 20px;
+}
+
+#skip a:active,
+#skip a:focus {
+    left: 0;
+}
+
+/* main */
+#main {
+    min-height: 50vh;
+}
+
+/* footer */
+#footer {
+    margin-top: 100px;
+}
+
+/* container */
+.container {
+    max-width: 1024px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.container-mobile {
+    max-width: 500px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+/* .line */
+.line-top {
+    position: relative;
+    /* border-bottom: 1px solid var(--pointColor1); */
+}
+
+.line-top::after {
+    content: '';
+    width: 82%;
+    height: 1px;
+    background-color: var(--pointColor1);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 5px;
+}
+
+.line-bottom {
+    position: relative;
+    /* border-bottom: 3px solid var(--black); */
+}
+
+.line-bottom::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--pointColor1);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 5px;
+}
+
+/* btn-style */
+.btn-style {
+    background-color: var(--pointColor1);
+    width: 100%;
+    padding: 0.5rem 4rem;
+    color: var(--white);
+    font-weight: 800;
+    border-radius: 40px;
+    font-size: 1.25rem;
+    line-height: 1;
+    font-family: var(--fontM);
+    display: inline-block;
+}
+
+/* active */
+.active {
+    background-color: var(--pointColor1);
+}
+
+@media (max-width:800px) {
+    .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+}
