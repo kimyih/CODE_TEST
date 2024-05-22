@@ -50,7 +50,7 @@
                 <div class="Mypage_header"></div>
                 <div class="Mypage_tap">
                     <a href="index.php"><button class="Mypage_code active">코드</button></a>
-                    <a href=""><button class="Mypage_board">보드</button></a>
+                    <a href="MyPage/MyBoard.php"><button class="Mypage_board">보드</button></a>
                     <a href="MyPage/MyPageFeed.php"><button class="Mypage_feed">피드</button></a>
                 </div>
                 <div class="Mypage_info">
@@ -61,6 +61,30 @@
                                 <img src="./assets/img/icon_cross_grey.webp" alt="">
                                 <span>코드 추가</span>
                             </button>
+                            <div class="addItem_outcontainer">
+                                <div class="addItem_modal">
+                                    <div class="addItem_popup">
+                                        <div class="addItem_popup_top">
+                                            <div class="popup_top_title">코드 추가</div>
+                                            <button class="popup_top_close">
+                                                <img src="assets/img/close_black.webp" alt="">
+                                            </button>
+                                        </div>
+                                        <div class="addItem_popup_contents">
+                                            <div class="popup_contents_codename">코드 이름</div>
+                                            <input class="contenst_codename" type="text">
+                                            <input class="popup_contents_text" type="text"></input>
+                                            <div class="container_line"></div>
+                                        </div>
+                                        <div class="addItem_popup_bottom">
+                                            <button class="addItem_save">
+                                                <span>저장하기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //아이템 추가 팝업창  -->
                         </div>
                         <div class="Code_Grid">
                             <?php while($row = $result->fetch_assoc()) { ?>
