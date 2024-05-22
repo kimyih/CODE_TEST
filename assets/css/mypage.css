@@ -15,35 +15,23 @@
     margin-bottom: 2.8rem;
 }
 
-#contents .code_btn .code {
-    width: 50px;
-    height: 20px;
-    background-color: var(--pointColor1-1);
-    border-radius: 20%;
-}
-
-#contents .code_btn .border {
-    width: 50px;
-    height: 20px;
-    background-color: var(--white);
-    border-radius: 20%;
-}
-
+#contents .code_btn .code,
+#contents .code_btn .border,
 #contents .code_btn .pide {
     width: 50px;
     height: 20px;
-    background-color: var(--white);
     border-radius: 20%;
 }
 
-/* .content_wrap {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px 20px;
-    width: 80%;
-} */
+#contents .code_btn .code {
+    background-color: var(--pointColor1-1);
+}
 
-/* contents */
+#contents .code_btn .border,
+#contents .code_btn .pide {
+    background-color: var(--white);
+}
+
 #contents {
     padding-bottom: 10.8rem;
     box-sizing: inherit;
@@ -57,7 +45,7 @@
     width: 100%;
 }
 
-/* //Mypage */
+/* Mypage */
 .Mypage_header {
     padding: 4.2rem 3.2rem 2rem;
 }
@@ -69,7 +57,7 @@
     justify-content: center;
 }
 
-.Mypage_tap li.active button {
+.Mypage_tap a .active {
     background-color: var(--pointColor3);
     color: var(--white);
 }
@@ -84,17 +72,9 @@
     color: var(--black);
     font-weight: 700;
     cursor: pointer;
-    text-align: center;
-    line-height: 3rem;
 }
 
-.Mypage_code.active,
-.Mypage_board.active,
-.Mypage_feed.active {
-    background-color: var(--pointColor3);
-}
-
-/* //Mypage_info */
+/* Mypage_info */
 .Mypage_info {
     width: 100%;
     background-color: var(--white);
@@ -103,28 +83,14 @@
 
 .Mypage_info_codes {
     width: 100%;
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
+    padding: 1rem 1.6rem 2.6rem;
     border-radius: 3.6rem;
     background-color: var(--white);
-    padding: 1rem 1.6rem 2.6rem;
     min-height: 60rem;
     max-width: 144rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-}
-
-.Mypage_info_codes.code {
-    /* display: none; */
-}
-
-.Mypage_info_codes.board {
-    display: none;
-}
-
-.Mypage_info_codes.feed {
-    display: none;
 }
 
 .MyPage_info_items {
@@ -147,13 +113,13 @@
     margin-block-end: 1em;
 }
 
-/* //Mypage_addItem */
+/* Mypage_addItem */
 .Mypage_addItem {
     gap: 0.5rem;
     width: 8rem;
     height: 3rem;
     border-radius: 1.2rem;
-    background-color: hsla(0, 0%, 90%, .6);
+    background-color: hsla(0, 0%, 90%, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,11 +138,11 @@
     cursor: pointer;
 }
 
-/* //addItem_outcontainer */
+/* addItem_outcontainer */
 .addItem_outcontainer {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(18, 19, 20, .5);
+    background-color: rgba(18, 19, 20, 0.5);
     position: fixed;
     top: 0;
     left: 0;
@@ -191,12 +157,16 @@
     width: 40rem;
 }
 
-/* //addItem_popup */
+/* addItem_popup */
 .addItem_modal .addItem_popup {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     background-color: var(--white);
     justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .addItem_popup_top {
@@ -229,7 +199,7 @@
     background-color: transparent;
 }
 
-/* //addItem_popup_contents */
+/* addItem_popup_contents */
 .addItem_popup_contents {
     padding: 0 3rem;
 }
@@ -239,28 +209,23 @@
     font-weight: 400;
 }
 
-.contenst_codename {
+.contenst_codename,
+.popup_contents_text {
     width: 100%;
-    height: 50px;
     border-radius: 1.2rem;
-    border: 0.2rem solid hsla(0, 0%, 90%, .6);
-    background-color: hsla(0, 0%, 90%, .6);
+    border: 0.2rem solid hsla(0, 0%, 90%, 0.6);
+    background-color: hsla(0, 0%, 90%, 0.6);
     margin-top: 10px;
     padding-left: 20px;
 }
 
 .popup_contents_text {
-    width: 100%;
     height: 200px;
-    border: 0.2rem solid hsla(0, 0%, 90%, .6);
-    background-color: hsla(0, 0%, 90%, .6);
-    border-radius: 1.2rem;
     margin-top: 20px;
-    padding-left: 20px;
     margin-bottom: 20px;
 }
 
-/* //addItem_popup_bottom */
+/* addItem_popup_bottom */
 .addItem_popup_bottom {
     padding: 0 3rem;
 }
@@ -283,13 +248,35 @@
     background-color: var(--pointColor3);
 }
 
-/* //Code_Grid */
+/* Code_Grid */
 .Code_Grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-template-rows: 1fr;
-    gap: 30px;
-    margin-bottom: 30px;
+    justify-content: center;
+    grid-row-gap: 1.6rem;
+    row-gap: 1.6rem;
+    grid-column-gap: 1.8rem;
+    column-gap: 1.8rem;
+    max-width: 144rem;
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(16.6rem, 24.8rem));
+}
+
+@media (min-width: 281px) {
+    .Code_Grid {
+        grid-template-columns: repeat(2, minmax(11.55rem, 27.6rem));
+    }
+}
+
+@media (min-width: 525px) {
+    .Code_Grid {
+        grid-template-columns: repeat(3, minmax(14.4rem, 48rem));
+    }
+}
+
+@media (min-width: 996px) {
+    .Code_Grid {
+        grid-template-columns: repeat(5, minmax(16.6rem, 27.8rem));
+    }
 }
 
 .item_out_Container {
@@ -302,7 +289,7 @@
     position: relative;
 }
 
-/* //item_square */
+/* item_square */
 .item_square {
     width: 100%;
     height: 0;
@@ -318,7 +305,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: center / cover;
+    object-fit: cover;
     background-color: var(--white);
 }
 
@@ -328,7 +315,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .item_square .item_overlay:hover {
@@ -337,35 +324,97 @@
 }
 
 /* item_edit_Container */
-
 .item_edit_Container {
     position: relative;
-    top: 0;
-    left: 0;
+    top: 80%;
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 12px;
+    z-index: 1;
+}
+
+.item_editButton_Container {
+    padding-right: 5%;
 }
 
 .item_edit {
-    position: absolute;
-    bottom: 38px;
-    right: 14px;
-    width: 2.8rem;
-    height: 2.8rem;
+    position: static;
+    bottom: 13px;
+    right: 13px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background: hsla(0, 0%, 100%, .8);
+    background: hsla(0, 0%, 100%, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .item_edit img {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 25px;
+    height: 25px;
     color: transparent;
 }
 
-/* //item_gap */
+/* ItemEditModal */
+.ItemEditModal_container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    display: none;
+    z-index: 1000;
+}
+
+.ItemEditModal_menu {
+    width: 160px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    border-radius: 20px;
+    box-shadow: 0 0.4rem 1.6rem 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--white);
+    z-index: 1001;
+}
+
+.ItemEditModal_Item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 54px;
+    padding: 12px;
+    border-radius: 12px;
+    gap: 12px;
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.ItemEditModal_Item:hover {
+    background-color: #acacac;
+    color: var(--white);
+}
+
+.ItemEditModal_Item img {
+    width: 25px;
+    height: 25px;
+}
+
+.ItemEditModal_Item p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+/* item_gap */
 .item_gap {
     height: 0.6rem;
 }
@@ -375,26 +424,20 @@
     overflow: hidden;
 }
 
-/* 편집창 (수정 예정) */
-.editor {
-    position: absolute;
-    width: 73px;
-    height: 50px;
-    left: 10%;
-    top: 10%;
-    transform: translate(-50%, -50%);
-    background-color: var(--white);
-    border: 1px solid #ccc;
-    display: none;
-}
-
-.item_text .item_memo,
-.item_text .item_name {
-    font-size: 1.2rem;
+.item_text .item_name,
+.item_text .item_memo {
     font-family: var(--fontM);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.item_text .item_name {
+    font-size: 20px;
+}
+
+.item_text .item_memo {
+    font-size: 16px;
 }
 
 .Code_Grid a {
@@ -402,3 +445,232 @@
     padding: 0;
     box-sizing: inherit;
 }
+
+/* Modal 스타일 */
+.Modal_outerContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(18, 19, 20, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal 콘텐츠 스타일 */
+.Modal_container {
+    width: 42rem;
+    position: static;
+    background-color: #fff;
+    border-radius: 3rem;
+    box-shadow: 0 0.4rem 1.6rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.ItemEditPopup_container {
+    width: 46rem;
+    height: 50rem;
+    border-radius: 3.6rem;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    top: 0;
+}
+
+.ItemEditPopup_top {
+    height: 7.6rem;
+    width: 46rem;
+    border-radius: 3rem 3rem 0 0;
+    position: static;
+    padding: 4rem 4rem 2.4rem;
+    border-bottom: .1rem solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.ItemEditPopup_title {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+}
+
+.ItemEditPopup_closeIcon {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+/* ItemEditPopup_list */
+.ItemEditPopup_list {
+    padding: 2.4rem 3.2rem 2rem;
+    margin-bottom: 16.1rem;
+    overflow: scroll;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.ItemEditPopup_add {
+    padding: .8rem 1.6rem;
+    border-radius: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.ItemEditPopup_add .ItemEditPopup_buttonContainer {
+    width: 4.8rem;
+    height: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ItemEditPopup_add .ItemEditPopup_button {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #e6e6e6;
+}
+
+.ItemEditPopup_add .ItemEditPopup_button {
+    width: 2rem;
+    height: 2rem;
+}
+
+.ItemEditPopup_icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.ItemEditPopup_text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #565656;
+    opacity: .6;
+}
+
+/* .ItemEditPopup_bucket */
+.ItemEditPopup_bucket {
+    padding: .8rem 1.6rem;
+    border-radius: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.6rem
+}
+
+.ItemEditPopup_thumb {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 1.8rem;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ItemEditPopup_image {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 1.8rem;
+    object-fit: cover;
+    border: .1rem solid #e6e6e6;
+}
+
+.ItemEditPopup_content {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.ItemEditPopup_text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #565656;
+}
+
+/* ItemEditPopup_bottom */
+.ItemEditPopup_bottom {
+    position: absolute;
+    padding: 2rem 0 2.8rem;
+    gap: 2rem;
+    width: 46rem;
+    border-radius: 0 0 3.6rem 3.6rem;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    border-top: .1rem solid #e6e6e6;
+    background-color: #fff;
+}
+
+.ItemEditPopup_delete {
+    padding: 0 4.75rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ItemEditPopup_text {}
+
+.ItemEditPopup_title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #565656;
+    margin-bottom: .6rem;
+}
+
+.ItemEditPopup_desc {
+    font-size: 1.4rem;
+    font-weight: 400;
+    opacity: .6;
+}
+
+.ItemEditPopup_desc .ItemEditPopup_button {
+    position: relative;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 1.2rem;
+    background-color: hsla(0, 0%, 90%, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ItemEditPopup_image {
+    width: 2rem;
+    height: 2rem;
+}
+
+.ItemEditPopup_save {
+    padding: 0 4.75rem;
+    width: 100%;
+}
+
+.ItemEditPopup_save .ItemEditPopup_button {
+    width: 100%;
+    height: 4.8rem;
+    border-radius: 1.2rem;
+    background-color: #7f50ff;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 나머지 Modal 관련 스타일 유지 */

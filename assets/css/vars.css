@@ -39,25 +39,6 @@
     }
 }
 
-/* My page_info code_Grid */
-@media screen and (min-width: 996px) {
-    .Code_Grid {
-        grid-template-columns: repeat(5, minmax(16.6rem, 27.8rem));
-    }
-}
-
-@media screen and (min-width: 525px) {
-    .Code_Grid {
-        grid-template-columns: repeat(3, minmax(14.4rem, 48rem));
-    }
-}
-
-@media screen and (min-width: 281px) {
-    .Code_Grid {
-        grid-template-columns: repeat(2, minmax(11.55rem, 27.6rem));
-    }
-}
-
 /* //addItem_container_modal */
 @media (min-width: 768px) {
     .addItem_container_modal {

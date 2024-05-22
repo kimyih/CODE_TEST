@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="board" class="Mypage_info_codes board">
+        <div class="MyPage_info_items">
+            <p class="Mypage_count">몇 개의 보드</p>
+            <button class="Mypage_addItem">
+                <img src="/assets/img/icon_cross_grey.webp" alt="">
+                <span>보드 추가</span>
+            </button>
+            <div class="addboard_outcontainer">
+                <div class="addboard_container">
+                    <div class="addboard_popup_container">
+                        <div class="addItem_popup_top">
+                            <div class="popup_top_title">새 보드 추가</div>
+                            <button class="popup_top_close">
+                                <img src="/assets/img/close_black.webp" alt="">
+                            </button>
+                        </div>
+                        <!-- //addItem_popup_top -->
+
+                        <div class="addItem_popup_contents">
+                            <div class="popup_contents_codename">보드 이름</div>
+                            <input class="contenst_codename" type="text">
+                            <p class="addboard_popup_length">0/16</p>
+                            <div class="container_line"></div>
+                            <!-- //container_line 프로필 셋팅에서 재활용 -->
+                            <div class="addboard_popup_private">
+                                <input type="checkbox" type="checkbox">
+                                <label for="checkbox">비공개</label>
+                            </div>
+                        </div>
+                        <!--//addItem_popup_contents  -->
+
+                        <div class="addItem_popup_bottom">
+                            <button class="addItem_save">
+                                <span>저장하기</span>
+                            </button>
+                        </div>
+                        <!-- //addItem_popup_bottom -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //MyPage_info_items -->
+        <div class="Code_Grid">
+            <div class="Myboard_contaienr">
+                <div class="boardItem">
+                    <div class="boardItem_square">
+                        <a href="#">
+                            <div class="boardItem_squeare_container">
+                                <div class="boardItem_vertical">
+                                    <div class="boardItem_overlay"></div>
+                                    <img src="/assets/img/board_ex1.webp" alt="상품이름">
+                                </div>
+                                <div class="boardItem_vertical">
+                                    <div class="boardItem_horizontal">
+                                        <div class="boardItem_overlay"></div>
+                                        <img src="/assets/img/board_ex2.webp" alt="">
+                                    </div>
+                                    <div class="boardItem_horizontal">
+                                        <div class="boardItem_overlay"></div>
+                                        <img src="/assets/img/board_ex3.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="boardItem_line"></div>
+                            </div>
+                            <div class="boardIten_line2"></div>
+                        </a>
+                        <button class="boardItem_edit">
+                            <img src="/assets/img/icon_edit_black.webp" alt="">
+                        </button>
+                        <div class="addboard_edit_outcontainer">
+                            <div class="addboard_edit_container">
+                                <div class="addboard_popup_container">
+                                    <div class="addboard_popup_top">
+                                        <div class="board_popup_top_title">보드 편집</div>
+                                        <button class="board_popup_top_close">
+                                            <img src="/assets/img/close_black.webp" alt="">
+                                        </button>
+                                    </div>
+                                    <!-- //addItem_popup_top -->
+
+                                    <div class="addboard_popup_contents">
+                                        <div class="board_popup_contents_codename">보드 이름</div>
+                                        <input class="board_contents_codename" type="text">
+                                        <p class="addboard_popup_length">0/16</p>
+                                        <div class="addboard_popup_private">
+                                            <input type="checkbox" type="checkbox">
+                                            <label for="checkbox">비공개</label>
+                                        </div>
+                                    </div>
+                                    <!--//addItem_popup_contents  -->
+
+                                    <div class="addboard_popup_bottom">
+                                        <div class="board_container_line"></div>
+                                        <button class="addboard_save">
+                                            <span>저장하기</span>
+                                        </button>
+                                        <button class="addboard_delete">
+                                            <span>삭제하기</span>
+                                        </button>
+                                    </div>
+                                    <!-- //addItem_popup_bottom -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boardItem_memo">
+                        <p class="board_name">보드 제목</p>
+                        <p class="board_number">몇 개의 아이템</p>
+                    </div>
+                </div>
+                <!-- //boardItem -->
+            </div>
+
+            <script>
+                // // urlFolderTB 데이터 가져오기
+                // $folderQuery = "SELECT urlFolderID, urlsID, Title, youModTime, youRegTime FROM urlFolderTB WHERE userID = '$userID' ORDER BY urlFolderID DESC LIMIT $limit OFFSET $offset";
+                // $folderResult = $connect -> query($folderQuery);
+                // $folderTotalCount = $connect -> query("SELECT COUNT(*) as count FROM urlFolderTB WHERE userID = '$userID'") -> fetch_assoc()['count'];
+
+                // // 폴더 페이지 총 개수 계산
+                // $folderTotalPages = ceil($folderTotalCount / $limit);
+
+                // // 각 폴더에 속한 urlTB 데이터를 가져오기
+                // $folders = [];
+                // while ($folderRow = $folderResult -> fetch_assoc()) {
+                //     $urlsID = $folderRow['urlsID'];
+                //     $urlIDs = explode(',', $urlsID); // 콤마로 구분된 urlID를 배열로 분리
+                //     $urlIDs = array_map('intval', $urlIDs); // 문자열을 정수로 변환
+
+                //     if (count($urlIDs) > 0) {
+                //         // urlIDs 배열에서 3개의 URL ID만 선택
+                //         $limitedUrlIDs = array_slice($urlIDs, 0, 3);
+
+                //         $urlsQuery = "SELECT urlID, urlImg FROM urlTB WHERE urlID IN (".implode(',', $limitedUrlIDs). ")";
+                //         $urlsResult = $connect -> query($urlsQuery);
+
+                //         $urls = [];
+                //         while ($urlRow = $urlsResult -> fetch_assoc()) {
+                //             $urls[] = $urlRow;
+                //         }
+
+                //         $folders[] = [
+                //             'folder' => $folderRow,
+                //             'urls' => $urls
+                //         ];
+                //     }
+                // }
+            </script>
+</body>
+
+</html>
